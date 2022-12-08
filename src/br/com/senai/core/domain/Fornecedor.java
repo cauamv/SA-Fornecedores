@@ -4,31 +4,31 @@ import java.util.Objects;
 
 public class Fornecedor {
 	
-	private int codigo;
+	private int id;
 	
 	private String razaoSocial;
 	
 	private String nomeFantasia;
 	
-	private int cnpj;
+	private String cnpj;
 
-	public Fornecedor(String razaoSocial, String nomeFantasia, int cnpj) {
+	public Fornecedor(String razaoSocial, String nomeFantasia, String cnpj) {
 		this.razaoSocial = razaoSocial;
 		this.nomeFantasia = nomeFantasia;
 		this.cnpj = cnpj;
 	}
 
-	public Fornecedor(int codigo, String razaoSocial, String nomeFantasia, int cnpj) {
+	public Fornecedor(int id, String razaoSocial, String nomeFantasia, String cnpj) {
 		this(razaoSocial, nomeFantasia, cnpj);
-		this.codigo = codigo;
+		this.id = id;
 	}
 
-	public int getCodigo() {
-		return codigo;
+	public int getId() {
+		return id;
 	}
 
-	public void setCodigo(int codigo) {
-		this.codigo = codigo;
+	public void setId(int id) {
+		this.id = id;
 	}
 
 	public String getRazaoSocial() {
@@ -47,17 +47,17 @@ public class Fornecedor {
 		this.nomeFantasia = nomeFantasia;
 	}
 
-	public int getCnpj() {
+	public String getCnpj() {
 		return cnpj;
 	}
 
-	public void setCnpj(int cnpj) {
+	public void setCnpj(String cnpj) {
 		this.cnpj = cnpj;
 	}
 
 	@Override
 	public int hashCode() {
-		return Objects.hash(codigo);
+		return Objects.hash(id);
 	}
 
 	@Override
@@ -69,7 +69,7 @@ public class Fornecedor {
 		if (getClass() != obj.getClass())
 			return false;
 		Fornecedor other = (Fornecedor) obj;
-		return codigo == other.codigo;
+		return id == other.id;
 	}
 	
 	

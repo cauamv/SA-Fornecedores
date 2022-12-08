@@ -4,7 +4,7 @@ import java.util.Objects;
 
 public class Mercadoria {
 	
-	private int codigo;
+	private int id;
 	
 	private String descricaoCurta;
 	
@@ -15,17 +15,17 @@ public class Mercadoria {
 		this.valor = valor;
 	}
 
-	public Mercadoria(int codigo, String descricaoCurta, Double valor) {
+	public Mercadoria(int id, String descricaoCurta, Double valor) {
 		this(descricaoCurta, valor);
-		this.codigo = codigo;
+		this.id = id;
 	}
 
-	public int getCodigo() {
-		return codigo;
+	public int getId() {
+		return id;
 	}
 
-	public void setCodigo(int codigo) {
-		this.codigo = codigo;
+	public void setId(int id) {
+		this.id = id;
 	}
 
 	public String getDescricaoCurta() {
@@ -46,7 +46,7 @@ public class Mercadoria {
 
 	@Override
 	public int hashCode() {
-		return Objects.hash(codigo);
+		return Objects.hash(id);
 	}
 
 	@Override
@@ -58,7 +58,7 @@ public class Mercadoria {
 		if (getClass() != obj.getClass())
 			return false;
 		Mercadoria other = (Mercadoria) obj;
-		return codigo == other.codigo;
+		return id == other.id;
 	}
 	
 	

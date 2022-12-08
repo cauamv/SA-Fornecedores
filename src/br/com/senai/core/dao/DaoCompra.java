@@ -6,8 +6,8 @@ import br.com.senai.core.domain.Compra;
 
 public interface DaoCompra {
 
-	public void inserir(Compra compra);
+	public void inserir(List<Compra> compras);
 	
-	public List<Compra> listarPor(String nomeFantasia);
+	public List<Compra> listarPor(String fornecedor);
 	
 }
