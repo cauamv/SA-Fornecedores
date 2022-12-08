@@ -1,5 +1,5 @@
 package br.com.senai.core.domain;
 
-public class Joia {
+public class Compra {
 
 }
