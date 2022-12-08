@@ -4,7 +4,7 @@ import java.util.Objects;
 
 public class Colaborador {
 	
-	private int codigo;
+	private int id;
 	
 	private String nomeCompleto;
 
@@ -12,17 +12,17 @@ public class Colaborador {
 		this.nomeCompleto = nomeCompleto;
 	}
 
-	public Colaborador(int codigo, String nomeCompleto) {
+	public Colaborador(int id, String nomeCompleto) {
 		this(nomeCompleto);
-		this.codigo = codigo;
+		this.id = id;
 	}
 
-	public int getCodigo() {
-		return codigo;
+	public int getId() {
+		return id;
 	}
 
-	public void setCodigo(int codigo) {
-		this.codigo = codigo;
+	public void setId(int id) {
+		this.id = id;
 	}
 
 	public String getNomeCompleto() {
@@ -35,7 +35,7 @@ public class Colaborador {
 
 	@Override
 	public int hashCode() {
-		return Objects.hash(codigo);
+		return Objects.hash(id);
 	}
 
 	@Override
@@ -47,7 +47,7 @@ public class Colaborador {
 		if (getClass() != obj.getClass())
 			return false;
 		Colaborador other = (Colaborador) obj;
-		return codigo == other.codigo;
+		return id == other.id;
 	}
 	
 	

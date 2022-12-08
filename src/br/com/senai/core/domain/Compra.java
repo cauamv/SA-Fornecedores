@@ -5,7 +5,7 @@ import java.util.Objects;
 
 public class Compra {
 	
-	private int codigo;
+	private int id;
 	
 	LocalDate data;
 	
@@ -29,18 +29,18 @@ public class Compra {
 		this.item = item;
 	}
 
-	public Compra(int codigo, LocalDate data, Double total, String observacoes, Colaborador colaborador,
+	public Compra(int id, LocalDate data, Double total, String observacoes, Colaborador colaborador,
 			Fornecedor fornecedor, Item item) {
 		this(data, total, observacoes, colaborador, fornecedor, item);
-		this.codigo = codigo;
+		this.id = id;
 	}
 
-	public int getCodigo() {
-		return codigo;
+	public int getId() {
+		return id;
 	}
 
-	public void setCodigo(int codigo) {
-		this.codigo = codigo;
+	public void setId(int id) {
+		this.id = id;
 	}
 
 	public LocalDate getData() {
@@ -93,7 +93,7 @@ public class Compra {
 
 	@Override
 	public int hashCode() {
-		return Objects.hash(codigo);
+		return Objects.hash(id);
 	}
 
 	@Override
@@ -105,7 +105,7 @@ public class Compra {
 		if (getClass() != obj.getClass())
 			return false;
 		Compra other = (Compra) obj;
-		return codigo == other.codigo;
+		return id == other.id;
 	}
 	
 	

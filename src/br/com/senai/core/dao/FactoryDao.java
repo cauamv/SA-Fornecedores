@@ -1,8 +1,8 @@
 package br.com.senai.core.dao;
 
 import br.com.senai.core.dao.postgresql.DaoPostgresqlCompra;
-import br.com.senai.core.dao.postgresql.DaoPostgresqlItem;
 import br.com.senai.core.dao.postgresql.DaoPostgresqlFornecedor;
+import br.com.senai.core.dao.postgresql.DaoPostgresqlItem;
 
 public class FactoryDao {
 	
@@ -10,15 +10,15 @@ private static FactoryDao instance;
 	
 	private FactoryDao() {}
 	
-	public DaoCompra getDaoInscricao() {
+	public DaoCompra getDaoCompra() {
 		return new DaoPostgresqlCompra();
 	}
 	
-	public DaoItem getDaoAluno() {
+	public DaoItem getDaoItem() {
 		return new DaoPostgresqlItem();
 	}
 	
-	public DaoFornecedor getDaoUnidadeCurricular() {
+	public DaoFornecedor getDaoFornecedor() {
 		return new DaoPostgresqlFornecedor();
 	}
 	
