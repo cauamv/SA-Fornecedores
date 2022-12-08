@@ -8,6 +8,6 @@ public interface DaoCompra {
 
 	public void inserir(Compra compra);
 	
-	public List<Compra> listarPor(String compra);
+	public List<Compra> listarPor(String nomeFantasia);
 	
 }
