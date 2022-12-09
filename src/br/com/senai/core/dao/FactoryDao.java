@@ -4,10 +4,8 @@ import br.com.senai.core.dao.postgresql.DaoPostgresqlColaborador;
 import br.com.senai.core.dao.postgresql.DaoPostgresqlCompra;
 import br.com.senai.core.dao.postgresql.DaoPostgresqlFornecedor;
 import br.com.senai.core.dao.postgresql.DaoPostgresqlItem;
-<<<<<<< HEAD
-=======
 import br.com.senai.core.dao.postgresql.DaoPostgresqlMercadoria;
->>>>>>> branch 'main' of https://github.com/cauamv/SA-Fornecedores.git
+
 
 public class FactoryDao {
 	

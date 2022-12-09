@@ -1,10 +1,4 @@
-<<<<<<< HEAD
-package br.com.senai.core.dao.postgresql;
 
-public class DaoPostgresqlMercadoria {
-
-}
-=======
 package br.com.senai.core.dao.postgresql;
 
 import java.sql.Connection;
@@ -61,4 +55,4 @@ public class DaoPostgresqlMercadoria implements DaoMercadoria {
 	}
 
 }
->>>>>>> branch 'main' of https://github.com/cauamv/SA-Fornecedores.git
+

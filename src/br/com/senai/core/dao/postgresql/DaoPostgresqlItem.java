@@ -9,7 +9,6 @@ public class DaoPostgresqlItem implements DaoItem {
 
 	@Override
 	public void inserir(Item item) {
-<<<<<<< HEAD
 		// XXX Auto-generated method stub
 		
 	}
@@ -22,8 +21,6 @@ public class DaoPostgresqlItem implements DaoItem {
 
 	@Override
 	public List<Item> listarPor(int idDaMercadoria) {
-		// XXX Auto-generated method stub
-=======
 		// TODO Auto-generated method stub
 		
 	}
@@ -37,8 +34,6 @@ public class DaoPostgresqlItem implements DaoItem {
 	@Override
 	public List<Item> listarPor(int idDaMercadoria) {
 		// TODO Auto-generated method stub
->>>>>>> branch 'main' of https://github.com/cauamv/SA-Fornecedores.git
-		return null;
 	}
 
 }

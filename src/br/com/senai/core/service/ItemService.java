@@ -1,10 +1,8 @@
 package br.com.senai.core.service;
 
-import java.time.LocalDate;
 import java.util.List;
 
 import br.com.senai.core.dao.DaoItem;
-import br.com.senai.core.domain.Compra;
 import br.com.senai.core.domain.Item;
 
 public class ItemService {

@@ -16,13 +16,8 @@ public class Fornecedor {
 		this.razaoSocial = razaoSocial;
 		this.nomeFantasia = nomeFantasia;
 		this.cnpj = cnpj;
-	}
-
-<<<<<<< HEAD
-	public Fornecedor(int id, String razaoSocial, String nomeFantasia, int cnpj) {
-=======
+	}	
 	public Fornecedor(int id, String razaoSocial, String nomeFantasia, String cnpj) {
->>>>>>> branch 'main' of https://github.com/cauamv/SA-Fornecedores.git
 		this(razaoSocial, nomeFantasia, cnpj);
 		this.id = id;
 	}

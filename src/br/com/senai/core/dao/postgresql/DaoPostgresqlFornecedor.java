@@ -1,36 +1,4 @@
 package br.com.senai.core.dao.postgresql;
-
-<<<<<<< HEAD
-import java.util.List;
-
-import br.com.senai.core.dao.DaoFornecedor;
-import br.com.senai.core.domain.Fornecedor;
-
-public class DaoPostgresqlFornecedor implements DaoFornecedor {
-
-	@Override
-	public void inserir(Fornecedor fornecedor) {
-		// XXX Auto-generated method stub
-		
-	}
-
-	@Override
-	public void alterar(Fornecedor fornecedor) {
-		// XXX Auto-generated method stub
-		
-	}
-
-	@Override
-	public void removerPor(int id) {
-		// XXX Auto-generated method stub
-		
-	}
-
-	@Override
-	public List<Fornecedor> listarPor(String nomeFantasia) {
-		// XXX Auto-generated method stub
-		return null;
-=======
 import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
@@ -183,7 +151,7 @@ public class DaoPostgresqlFornecedor implements DaoFornecedor {
 			throw new RuntimeException("Ocorreu um erro ao "
 					+ "extrair o fornecedor. Motivo: " + e.getMessage());
 		}
->>>>>>> branch 'main' of https://github.com/cauamv/SA-Fornecedores.git
+
 	}
 
 }
