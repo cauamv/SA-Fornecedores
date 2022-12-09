@@ -12,6 +12,8 @@ public interface DaoFornecedor {
 	
 	public void removerPor(int id);
 	
+	public Fornecedor buscarPor(int id);
+	
 	public List<Fornecedor> listarPor(String nomeFantasia);
 	
 }

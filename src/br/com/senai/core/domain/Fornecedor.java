@@ -10,15 +10,19 @@ public class Fornecedor {
 	
 	private String nomeFantasia;
 	
-	private int cnpj;
+	private String cnpj;
 
-	public Fornecedor(String razaoSocial, String nomeFantasia, int cnpj) {
+	public Fornecedor(String razaoSocial, String nomeFantasia, String cnpj) {
 		this.razaoSocial = razaoSocial;
 		this.nomeFantasia = nomeFantasia;
 		this.cnpj = cnpj;
 	}
 
+<<<<<<< HEAD
 	public Fornecedor(int id, String razaoSocial, String nomeFantasia, int cnpj) {
+=======
+	public Fornecedor(int id, String razaoSocial, String nomeFantasia, String cnpj) {
+>>>>>>> branch 'main' of https://github.com/cauamv/SA-Fornecedores.git
 		this(razaoSocial, nomeFantasia, cnpj);
 		this.id = id;
 	}
@@ -47,11 +51,11 @@ public class Fornecedor {
 		this.nomeFantasia = nomeFantasia;
 	}
 
-	public int getCnpj() {
+	public String getCnpj() {
 		return cnpj;
 	}
 
-	public void setCnpj(int cnpj) {
+	public void setCnpj(String cnpj) {
 		this.cnpj = cnpj;
 	}
 

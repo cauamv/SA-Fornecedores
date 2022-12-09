@@ -1,8 +1,13 @@
 package br.com.senai.core.dao;
 
+import br.com.senai.core.dao.postgresql.DaoPostgresqlColaborador;
 import br.com.senai.core.dao.postgresql.DaoPostgresqlCompra;
 import br.com.senai.core.dao.postgresql.DaoPostgresqlFornecedor;
 import br.com.senai.core.dao.postgresql.DaoPostgresqlItem;
+<<<<<<< HEAD
+=======
+import br.com.senai.core.dao.postgresql.DaoPostgresqlMercadoria;
+>>>>>>> branch 'main' of https://github.com/cauamv/SA-Fornecedores.git
 
 public class FactoryDao {
 	
@@ -22,11 +27,18 @@ private static FactoryDao instance;
 		return new DaoPostgresqlFornecedor();
 	}
 	
+	public DaoColaborador getDaoColaborador() {
+		return new DaoPostgresqlColaborador();
+	}
+	
+	public DaoMercadoria getDaoMercadoria() {
+		return new DaoPostgresqlMercadoria();
+	}
+	
 	public static FactoryDao getInstance() {
 		if (instance == null) {
 			instance = new FactoryDao();
 		}
 		return instance;
 	}
-
 }
