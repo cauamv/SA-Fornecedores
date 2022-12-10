@@ -1,3 +1,4 @@
+
 package br.com.senai.core.dao;
 
 import java.util.List;

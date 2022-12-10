@@ -6,12 +6,10 @@ import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.util.ArrayList;
 import java.util.List;
-
 import br.com.senai.core.dao.DaoCompra;
 import br.com.senai.core.dao.ManagerDb;
 import br.com.senai.core.domain.Colaborador;
 import br.com.senai.core.domain.Compra;
-import br.com.senai.core.domain.Fornecedor;
 
 
 public class DaoPostgresqlCompra implements DaoCompra {
@@ -38,6 +36,7 @@ public class DaoPostgresqlCompra implements DaoCompra {
 	}
 
 	@Override
+
 	public void inserir(List<Compra> compras) {
 		PreparedStatement ps = null;
 		try {
@@ -59,10 +58,10 @@ public class DaoPostgresqlCompra implements DaoCompra {
 		} finally {
 			ManagerDb.getInstance().fechar(ps);
 		}
-
 	}
 
 	@Override
+
 	public List<Compra> listarPor(String fornecedor) {
 		List<Compra> compras = new ArrayList<Compra>();
 		PreparedStatement ps = null;
@@ -83,6 +82,7 @@ public class DaoPostgresqlCompra implements DaoCompra {
 		return compras;
 	}
 
+
 	private Colaborador extrairDoColaborador(ResultSet rs) {
 		try {
 
@@ -96,7 +96,7 @@ public class DaoPostgresqlCompra implements DaoCompra {
 	}
 	
 	
-	public void ListarColaborador () {
+	public List<Colaborador> ListarColaborador () {
 		PreparedStatement ps = null;
 		List<Colaborador> colaborador = new ArrayList<Colaborador>();
 		ResultSet rs = null;
@@ -104,10 +104,9 @@ public class DaoPostgresqlCompra implements DaoCompra {
 			ps = conexao.prepareStatement(SELECT_COLABORADOR);
 			rs = ps.executeQuery();
 			 while (rs.next()) {
-				 colaborador.add(extrairDo(rs));
+				 colaborador.add(extrairDoColaborador(rs));
 			 }
-			
-			
+			return colaborador;
 			
 		} catch (Exception e) {
 			throw new RuntimeException("Ocorreu um erro ao listar os colaboradores. Motivo: " + e.getMessage());
@@ -118,13 +117,7 @@ public class DaoPostgresqlCompra implements DaoCompra {
 			
 			
 		}
-		
-				
-				
-				
-		
-		
+			
 	}
 	
-
 }

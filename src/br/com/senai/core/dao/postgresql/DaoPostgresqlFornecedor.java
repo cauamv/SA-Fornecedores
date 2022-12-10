@@ -1,5 +1,4 @@
 package br.com.senai.core.dao.postgresql;
-
 import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
@@ -8,6 +7,7 @@ import java.util.List;
 
 import br.com.senai.core.dao.DaoFornecedor;
 import br.com.senai.core.dao.ManagerDb;
+import br.com.senai.core.domain.Colaborador;
 import br.com.senai.core.domain.Fornecedor;
 
 public class DaoPostgresqlFornecedor implements DaoFornecedor {
@@ -25,6 +25,8 @@ public class DaoPostgresqlFornecedor implements DaoFornecedor {
 	
 	private final String SELECT_BY_NAME = "SELECT id, razao_social, nome_fantasia, "
 			+ "cnpj FROM fornecedores WHERE Upper(nome_fantasia) LIKE Upper(?) ";
+	
+	private final String SELECT_TODOS = "SELECT id, nome_fantasia FROM fornecedores ORDER BY id";
 	
 	private Connection conexao;
 
@@ -151,7 +153,45 @@ public class DaoPostgresqlFornecedor implements DaoFornecedor {
 		}catch (Exception e) {
 			throw new RuntimeException("Ocorreu um erro ao "
 					+ "extrair o fornecedor. Motivo: " + e.getMessage());
+			}
 		}
+		
+		private List<Fornecedor> ListarFornecedor() {
+			PreparedStatement ps = null;
+			List<Fornecedor> fornecedor = new ArrayList<Fornecedor>();
+			ResultSet rs = null;
+			try {
+				ps = conexao.prepareStatement(SELECT_TODOS);
+				rs = ps.executeQuery();
+				 while (rs.next()) {
+					 fornecedor.add(extrairTodos(rs));
+				 }
+				return fornecedor;
+				
+			} catch (Exception e) {
+				throw new RuntimeException("Ocorreu um erro ao listar os fornecedores. Motivo: " + e.getMessage());
+			} finally {
+				ManagerDb.getInstance().fechar(ps);
+				ManagerDb.getInstance().fechar(rs);
+				
+				
+				
+			}
+		
+		}
+		
+		private Fornecedor extrairTodos(ResultSet rs) {
+			try {
+				int id = rs.getInt("id");
+				String nomeFantasia = rs.getString("nome_fantasia");;	
+				return new Fornecedor(id, nomeFantasia);
+			}catch (Exception e) {
+				throw new RuntimeException("Ocorreu um erro ao "
+						+ "extrair o fornecedor. Motivo: " + e.getMessage());
+			}
+		
+		
+
 	}
 
 }

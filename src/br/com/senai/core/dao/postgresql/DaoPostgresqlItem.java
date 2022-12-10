@@ -9,6 +9,18 @@ public class DaoPostgresqlItem implements DaoItem {
 
 	@Override
 	public void inserir(Item item) {
+		// XXX Auto-generated method stub
+		
+	}
+
+	@Override
+	public void removerPor(int id) {
+		// XXX Auto-generated method stub
+		
+	}
+
+	@Override
+	public List<Item> listarPor(int idDaMercadoria) {
 		// TODO Auto-generated method stub
 		
 	}
@@ -22,7 +34,6 @@ public class DaoPostgresqlItem implements DaoItem {
 	@Override
 	public List<Item> listarPor(int idDaMercadoria) {
 		// TODO Auto-generated method stub
-		return null;
 	}
 
 }

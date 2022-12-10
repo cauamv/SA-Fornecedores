@@ -12,7 +12,7 @@ public class MercadoriaService {
 	
 	public MercadoriaService() {
 		this.dao = FactoryDao.getInstance().getDaoMercadoria();
-	}
+	}	
 	
 	public List<Mercadoria> listarTodas(){
 		return dao.listarTodas();

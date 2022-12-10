@@ -6,6 +6,7 @@ import br.com.senai.core.dao.postgresql.DaoPostgresqlFornecedor;
 import br.com.senai.core.dao.postgresql.DaoPostgresqlItem;
 import br.com.senai.core.dao.postgresql.DaoPostgresqlMercadoria;
 
+
 public class FactoryDao {
 	
 private static FactoryDao instance;

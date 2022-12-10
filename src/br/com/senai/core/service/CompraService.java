@@ -14,16 +14,23 @@ public class CompraService {
 	public CompraService() {
 		this.dao = FactoryDao.getInstance().getDaoCompra();
 	}
-	
+
 	public void salvar(Compra compra) {		
 		this.validar(compra);		
-		boolean isJaInserido = compra.getCodigo() > 0;		
+		boolean isJaInserido = compra.getId() > 0;		
 		if (isJaInserido) {
 			throw new IllegalArgumentException("Essa");
 		}else {
 			this.dao.inserir(compra);
 		}
-		LocalDate dataCompra = compra.getData();
+	}
+	
+	
+	public void validar(Compra compra) {
+		boolean isComprainvalida = compra.getItem() == null;
+		if (isComprainvalida) {
+			throw new IllegalArgumentException("A compra deve possuir ao menos 1 item");
+		}
 	}
 	
 	public List<Compra> listarPor(String fornecedor){

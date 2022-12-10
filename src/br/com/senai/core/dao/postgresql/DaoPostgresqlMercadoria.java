@@ -1,3 +1,4 @@
+
 package br.com.senai.core.dao.postgresql;
 
 import java.sql.Connection;
@@ -54,3 +55,4 @@ public class DaoPostgresqlMercadoria implements DaoMercadoria {
 	}
 
 }
+

@@ -16,12 +16,17 @@ public class Fornecedor {
 		this.razaoSocial = razaoSocial;
 		this.nomeFantasia = nomeFantasia;
 		this.cnpj = cnpj;
-	}
-
+	}	
 	public Fornecedor(int id, String razaoSocial, String nomeFantasia, String cnpj) {
 		this(razaoSocial, nomeFantasia, cnpj);
 		this.id = id;
 	}
+	
+	public Fornecedor (int id, String nomeFantasia) {
+		this.nomeFantasia = nomeFantasia;
+		this.id = id;
+	}
+	
 
 	public int getId() {
 		return id;

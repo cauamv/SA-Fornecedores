@@ -1,13 +1,16 @@
 package br.com.senai.core.domain;
 
 import java.time.LocalDate;
+import java.util.Date;
 import java.util.Objects;
+
+import javax.swing.JOptionPane;
 
 public class Compra {
 	
 	private int id;
 	
-	LocalDate data;
+	private LocalDate data;
 	
 	private Double total;
 	
