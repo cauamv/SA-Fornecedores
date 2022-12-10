@@ -27,6 +27,14 @@ public class ManagerDb {
 		return conexao;
 	}
 	
+	public void realizarRollbackNa(Connection conexao) {
+		try {
+			conexao.rollback();
+		}catch (Exception e) {
+			throw new RuntimeException("Ocorreu um erro no rollback. Motivo: " + e.getMessage());
+		}
+	}
+	
 	public void configurarAutocommitDa(Connection conexao, boolean isHabilitado) {
 		try {
 			if (conexao != null) {

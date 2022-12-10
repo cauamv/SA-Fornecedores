@@ -49,8 +49,8 @@ public class FornecedorService {
 			
 			boolean isCnpjInvalido = fornecedor.getCnpj() == null 
 					|| fornecedor.getCnpj().isBlank() 
-					|| fornecedor.getCnpj().length() < 14
-					|| fornecedor.getCnpj().length() > 14;
+					|| fornecedor.getCnpj().length() != 18
+					|| fornecedor.getCnpj().equals("  .   .   /    -  ");
 					
 			if (isCnpjInvalido) {
 				throw new IllegalArgumentException("O cnpj é obrigatório "
